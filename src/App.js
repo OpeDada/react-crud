@@ -1,8 +1,16 @@
-import React from "react";
+import React, { useState } from "react";
 import UserTable from "./tables/UserTable";
 import "bootstrap/dist/css/bootstrap.min.css";
 
 const App = () => {
+  const usersData = [
+    { id: 1, name: "Tolu", lastname: "Oba" },
+    { id: 2, name: "Ope", lastname: "Dada" },
+    { id: 3, name: "John", lastname: "Peters" },
+  ];
+
+  const [users, setUsers] = useState(usersData);
+
   return (
     <div className="container">
       <h1>React CRUD app</h1>
