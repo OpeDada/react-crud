@@ -7,12 +7,14 @@ const App = () => {
     <div className="container">
       <h1>React CRUD app</h1>
       <div className="flex-row">
-        <div className="flex-large">
-          <h2>Add user</h2>
-        </div>
-        <div className="flex-large">
-          <h2>View users</h2>
-          <UserTable />
+        <div className="d-flex justify-content-between">
+          <div className="flex-large">
+            <h2>Add user</h2>
+          </div>
+          <div className="flex-large">
+            <h2>View users</h2>
+            <UserTable />
+          </div>
         </div>
       </div>
     </div>
