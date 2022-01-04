@@ -1,5 +1,6 @@
 import React from "react";
 import UserTable from "./tables/UserTable";
+import "bootstrap/dist/css/bootstrap.min.css";
 
 const App = () => {
   return (
