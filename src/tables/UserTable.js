@@ -12,9 +12,9 @@ const UserTable = (props) => (
     <tbody>
       {props.users.length > 0 ? (
         props.users.map((user) => (
-          <tr>
-            <td>Firs Name info</td>
-            <td>Last Name info</td>
+          <tr key={user.id}>
+            <td>{user.firstname}</td>
+            <td>{user.lastname}</td>
             <td>
               <button className="button muted-button">Edit</button>
               <button className="button muted-button">Delete</button>
