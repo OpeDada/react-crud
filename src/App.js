@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import UserTable from "./tables/UserTable";
+import AddUserForm from "./forms/AddUserForm";
 import "bootstrap/dist/css/bootstrap.min.css";
 
 const App = () => {
@@ -23,6 +24,7 @@ const App = () => {
         <div className="d-flex justify-content-between">
           <div className="flex-large">
             <h2>Add user</h2>
+            <AddUserForm addUser={addUser} />
           </div>
           <div className="flex-large">
             <h2>View users</h2>
