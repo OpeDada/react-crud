@@ -12,7 +12,15 @@ const AddUserForm = (props) => {
   };
 
   return (
-    <form>
+    <form
+      onSubmit={(event) => {
+        event.preventDefault();
+        if (!user.firstname || !user.lastname) return;
+
+        props.addUser(user);
+        setUser(initialFormState);
+      }}
+    >
       <label>First Name</label>
       <input
         type="text"
