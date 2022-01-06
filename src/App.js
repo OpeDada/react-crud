@@ -21,6 +21,16 @@ const App = () => {
     setUsers([...users, user]);
   };
 
+  const editUser = (user) => {
+    setEditing(true);
+
+    setCurrentUser({
+      id: user.id,
+      firstname: user.firstname,
+      lastname: user.lastname,
+    });
+  };
+
   const deleteUser = (id) => {
     alert("Are you sure?");
     setUsers(users.filter((user) => user.id !== id));
