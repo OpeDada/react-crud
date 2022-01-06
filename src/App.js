@@ -12,6 +12,10 @@ const App = () => {
 
   const [users, setUsers] = useState(usersData);
 
+  const initialFormState = { id: null, firstname: "", lastname: "" };
+  const [CurrentUser, setCurrentUser] = useState(initialFormState);
+  const [editing, setEditing] = useState(false);
+
   const addUser = (user) => {
     user.id = users.length + 1;
     setUsers([...users, user]);
