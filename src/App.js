@@ -31,6 +31,12 @@ const App = () => {
     });
   };
 
+  const updateUser = (id, updatedUser) => {
+    setEditing(false);
+
+    setUsers(users.map((user) => (user.id === id ? updatedUser : user)));
+  };
+
   const deleteUser = (id) => {
     alert("Are you sure?");
     setUsers(users.filter((user) => user.id !== id));
