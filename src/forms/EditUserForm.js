@@ -42,3 +42,5 @@ const EditUserForm = (props) => {
     </form>
   );
 };
+
+export default EditUserForm;
