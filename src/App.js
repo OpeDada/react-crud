@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import UserTable from "./tables/UserTable";
 import AddUserForm from "./forms/AddUserForm";
+import EditUserForm from "./forms/EditUserForm";
 import "bootstrap/dist/css/bootstrap.min.css";
 
 const App = () => {
@@ -48,8 +49,21 @@ const App = () => {
       <div className="flex-row">
         <div className="d-flex justify-content-between">
           <div className="flex-large">
-            <h2>Add user</h2>
-            <AddUserForm addUser={addUser} />
+            {editing ? (
+              <div>
+                <h2>Edit User</h2>
+                <EditUserForm
+                  setEditing={setEditing}
+                  currentUser={currentUser}
+                  updateUser={updateUser}
+                />
+              </div>
+            ) : (
+              <div>
+                <h2>Add user</h2>
+                <AddUserForm addUser={addUser} />
+              </div>
+            )}
           </div>
           <div className="flex-large">
             <h2>View users</h2>
