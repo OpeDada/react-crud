@@ -11,9 +11,9 @@ const App = () => {
     { id: 3, firstname: "John", lastname: "Peters" },
   ];
 
-  const [users, setUsers] = useState(usersData);
-
   const initialFormState = { id: null, firstname: "", lastname: "" };
+
+  const [users, setUsers] = useState(usersData);
   const [currentUser, setCurrentUser] = useState(initialFormState);
   const [editing, setEditing] = useState(false);
 
@@ -40,6 +40,7 @@ const App = () => {
 
   const deleteUser = (id) => {
     alert("Are you sure?");
+    setEditing(false);
     setUsers(users.filter((user) => user.id !== id));
   };
 
@@ -53,6 +54,7 @@ const App = () => {
               <div>
                 <h2>Edit User</h2>
                 <EditUserForm
+                  editing={editing}
                   setEditing={setEditing}
                   currentUser={currentUser}
                   updateUser={updateUser}
