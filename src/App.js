@@ -34,7 +34,6 @@ const App = () => {
 
   const updateUser = (id, updatedUser) => {
     setEditing(false);
-
     setUsers(users.map((user) => (user.id === id ? updatedUser : user)));
   };
 
@@ -54,7 +53,6 @@ const App = () => {
               <div>
                 <h2>Edit User</h2>
                 <EditUserForm
-                  editing={editing}
                   setEditing={setEditing}
                   currentUser={currentUser}
                   updateUser={updateUser}
